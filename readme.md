@@ -1,6 +1,6 @@
 ## Credit Card Approval Prediction
 
-###Description:
+### Description:
 This project is about predicting the status of credit card application based on the information provided by the client, as well as the credit history available. Note that the datasets we have no labels yet, so we need to do it on ourselves by making parameters.
 The type of this machine learning is classification which is about predicting label.
 
@@ -12,7 +12,7 @@ This package contains the 2 datasets and 4 python files:
 5. approval.py
 6. manual_val.py
 
-###Methodology:
+### Methodology:
 This section explains the procedures done in completing this project.
 
 1. Identifying which information will be helpful in predicting the credit card application based on the 2 datasets we have.
@@ -58,7 +58,7 @@ This section explains the procedures done in completing this project.
     
 Note: I am getting 100% using the DecisionTreeClassifier as the model  is capturing the same parameters that I used in the approval_decision function.
 
-###Usage:
+### Usage:
 This package can be used to the new application records to make a prediction whether the it will be approved or rejected. The parameters can be also adjusted in the approval.py, and the manual_val can be used to different machine learning model to check the accuracy.
     
     
