@@ -39,7 +39,7 @@ This section explains the procedures done in completing this project.
     Now that I have labeled data this can be used in building the machine learning model and training it.
       
 
-5. Building a machine learning model suitable for the objective. As this is a classification, we need to use Decision Tree Classifier or Logistic Regression.
+5. Building a machine learning model suitable for the objective. As this is a classification, I chose to check the Decision Tree Classifier and Logistic Regression.
      - main.py: I split the datasets 80% for training and 20% for testing.
     - I used two models: DecisionTreeClassifier and LogisticRegression from sklearn library.
     - I fit the train datasets for both models then I checked the accuracy by using the score method against the test data. 
