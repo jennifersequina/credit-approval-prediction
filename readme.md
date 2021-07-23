@@ -1,7 +1,7 @@
 ## Credit Card Approval Prediction
 
 ### Description:
-This project is about predicting the status of credit card application based on the information provided by the client, as well as the credit history available. Note that the datasets we have no labels yet, so we need to do it on ourselves by making parameters.
+This project is about predicting the status of credit card application based on the information provided by the client and the credit history available. Note that the datasets have no labels yet, so I need to do it myself by making parameters.
 The type of this machine learning is classification which is about predicting label.
 
 This package contains the 2 datasets and 4 python files:
@@ -15,15 +15,15 @@ This package contains the 2 datasets and 4 python files:
 ### Methodology:
 This section explains the procedures done in completing this project.
 
-1. Identifying which information will be helpful in predicting the credit card application based on the 2 datasets we have.
-   - application_record.csv: we only want to get the ID, income, type of income, employment status.
-    - credit_record.csv: we want to get here the ID and the status of each loan (whether it was paid off the same month or it was overdue for couple of days)
+1. Identifying which information will be helpful in predicting the credit card application based on the 2 datasets.
+   - application_record.csv: I only to get the ID, income, type of income, employment status.
+    - credit_record.csv: ID and the status of each loan would be useful (whether it was paid off the same month or it was overdue for couple of days)
     
 
 2. Cleaning up the 2 datasets to make it useful in making the model.
-    - pre_processing.py: in this python file, we need to create 2 functions to clean up each dataset.
-    - pre_processing_app: we need to covert the important columns to binary, then we drop the columns which is not relevant in making approval decision.
-    - pre_processing_credit: we need to filter out the 'X' status as this only indicate that there's no existing loan in the current month (0). Then we need to convert the column 'STATUS' to binary. Here I decided to have status C as 1 (means they paid off loan the same month), others as 0 (means their loans went overdue). Then we need to group by 'ID' to get the count per status. Finally, to assess the credit performance of each client, we need to calculate the number of '1' out of the total loans they had then we need to create another binary label whether good or bad (1, 0). For me, I put a threshold of 80% of paid off loans within the month to be considered as 'good'.
+    - pre_processing.py: in this python file, I created 2 functions to clean up each dataset.
+    - pre_processing_app: I converted the important columns to binary, then drop the columns which is not relevant in making approval decision.
+    - pre_processing_credit: I filtered out the 'X' status as this only indicate that there's no existing loan in the current month (0). Then converted the column 'STATUS' to binary. Here I decided to have status C as 1 (means they paid off loan the same month), others as 0 (means their loans went overdue). Then grouped by 'ID' to get the count per status. Finally, to assess the credit performance of each client, I calculated the number of '1' out of the total loans they had then created another binary label whether good or bad (1, 0). I put a threshold of 80% of paid off loans within the month to be considered as 'good'.
     
 
 3. Creating parameters for the approval of application. 
